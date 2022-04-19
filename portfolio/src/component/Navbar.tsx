@@ -1,11 +1,24 @@
 import { Link, Outlet } from "react-router-dom";
 
+import Logo from "./Navbar/Logo";
+import PageLinks from "./Navbar/PageLinks";
+
+const pages: string[] = [
+    'Projects',
+    'Blog',
+    'Contact'
+]
+
+const pagesURLs: string[] = [
+    '/projects',
+    '/blog',
+    '/contact'
+]
+
 function Navbar() {
     return (
         <div className="navbar">
-            <Link to="/">
-                <h1 className="logo">Mr Programmer</h1>
-            </Link>
+            <Logo displayText="Generic Programmer"/>
             <nav className="navbar-links">
                 <ul>
                     <Link to="/projects"><li className="link"><a>Projects</a></li></Link>
