@@ -4,20 +4,22 @@ import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
 
 import Navbar from "./component/Navbar";
-import {BrowserRouter as Router, Route, Routes, Outlet } from "react-router-dom"
+import StyledNavbar from "./component/styles/Navbar.styled"
+import {Route, Routes} from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Navbar/>}>
-          <Route index element={<LandingPage/>}/>
-          <Route path="projects" element={<ProjectsPage/>}/>
-          <Route path="blog" element={<BlogPage/>}/>
-          <Route path="contact" element={<ContactPage/>}/>
-        </Route>
-      </Routes>
-    </Router>
+    <div>
+      <StyledNavbar>
+        <Navbar/>
+      </StyledNavbar>
+        <Routes>
+          <Route path="/" element={<LandingPage/>}/>
+          <Route path="/projects" element={<ProjectsPage/>}/>
+          <Route path="/blog" element={<BlogPage/>}/>
+          <Route path="/contact" element={<ContactPage/>}/>
+        </Routes>
+    </div>
   );
 }
 
