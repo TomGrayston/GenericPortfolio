@@ -7,4 +7,5 @@ Figma Design found ---> [here](https://www.figma.com/file/pTwpWw0MgPqCkyUob15GVx
 
 - [React](https://reactjs.org/docs/getting-started.html) 
 - [Styled Components](https://styled-components.com/) [CSS]
-- [React Navigation](https://reactnavigation.org/) [Page Nav etc]
+- [React Router](https://reactrouter.com/) [Page Nav etc]
+- [Font Awesome](https://fontawesome.com/icons) [For Icons etc]
