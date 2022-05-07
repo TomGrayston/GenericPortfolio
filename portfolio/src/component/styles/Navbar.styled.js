@@ -7,13 +7,13 @@ const Navbar = styled.div`
 `;
 
 export const DesktopNavbarDivider = styled.hr`
-    @media(max-width: 700px){
+    @media(max-width: 769px){
         display: none;
     }
 `
 
 export const MoblieNavbarDivider = styled.hr`
-    @media(min-width: 700px){
+    @media(min-width: 770px){
         display: none;
     }
 `
@@ -27,7 +27,7 @@ export const HamburgerButton = styled.i`
     
     color: black;
 
-    @media (min-width: 700px) {
+    @media (min-width: 770px) {
         display: none;
     }
 `;
@@ -38,10 +38,10 @@ export const ExitButton = styled.i`
     left: 0;
     margin: 1rem;
     font-size: 1.5rem;
-    z-index: 2;
+    z-index: 5;
     color: black;
     cursor: pointer;
-    @media (min-width: 700px) {
+    @media (min-width: 770px) {
         display: none;
     }
 `
@@ -57,13 +57,13 @@ export const MoblieNavbar = styled.nav`
 
     background-color: white;
 
-    @media (min-width: 700px) {
-        display: none;
-    }
-
     a {
         color: black;
         text-decoration: none;
+    }
+
+    @media (min-width: 770px) {
+        display: none;
     }
 `
 
@@ -93,53 +93,58 @@ export const MoblieNavAccordion = styled.nav`
         color: black;
         text-decoration: none;
     }
-    @media (min-width: 700px) {
+    @media (min-width: 770px) {
         display: none;
     }
 `;
 
 export const DesktopNavbar = styled.nav`
-    display: flex;
-    height: 15%;
-    gap: 3rem;
-    align-items: center;
-    text-align: center;
-    padding: 1rem 25%;
-    max-width: 100%;
-    font-family: 'Ubuntu', sans-serif;
 
-    background-color: white;
+display: flex;
+align-items: center;
+text-align: center;
+max-width: 100%;
+padding: 1rem;
+height: 15%;
+gap: 3rem;
+font-family: 'Ubuntu', sans-serif;
 
-
-    a:first-child {
-        text-decoration: none;
-        margin-right: auto;
-        font-size: 1rem;
-        font-weight: 500;
-        &:hover{
-            color: black;
-            cursor: pointer;
-            background-color: white;
-        }
-    }
-    a {
+a:first-child{
+    text-decoration: none;
+    margin-right: auto;
+    font-size: 1rem;
+    font-weight: 500;
+    &:hover{
         color: black;
-        text-decoration: none;
-        font-weight: 400;
-        font-size: 1.15rem;
-        &:hover{
-            color: #040057;
-            cursor: pointer;
-        }
+        cursor: pointer;
     }
-    
-    @media (max-width: 700px) {
-        display: none;
-    };
+}
+a{
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.15rem;
+    &:hover{
+        color: #040057;
+        cursor: pointer;
+    }
+}
 
-    @media (max-width: 1500px) {
-        padding: 1rem 10%;
-    };
+@media (max-width: 769px){
+    display: none;
+}
+
+@media (min-width: 1100px){
+    padding: 1rem 10%;
+}
+
+@media (min-width: 1400px){
+    padding: 1rem 15%;
+}
+
+@media (min-width: 2560px){
+    padding: 1rem 20%;
+}
 `
 
 export default Navbar;
