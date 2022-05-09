@@ -51,7 +51,7 @@ const Header = () => {
             Thanks for dropping by,
             </Text>
             <Heading fontSize="2xl" >
-            Tom Grayston
+            Dev Person
             </Heading>
         </VStack>
     </Stack>

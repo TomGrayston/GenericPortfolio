@@ -7,11 +7,11 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider>
         <Head>
             <title>
-                Tom Grayston
+                Dev Person - Software Engineer
             </title>
             <meta
                 name="desciption"
-                content="Personal Portfolio of Tom Grayston, a software engineer"
+                content="Personal Portfolio of Dev Person, a software engineer"
             />
         </Head>
         <Navbar/>
