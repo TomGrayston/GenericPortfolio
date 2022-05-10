@@ -4,7 +4,7 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 import { Heading } from "@chakra-ui/react";
 import { Stack, Text, VStack, Spacer } from "@chakra-ui/layout";
 import Image from "next/image";
-import profilepic from "../../../public/profilepicture.jpg";
+import profilepic from "../../public/profilepicture.jpg";
 
 const Header = () => {
     return (
