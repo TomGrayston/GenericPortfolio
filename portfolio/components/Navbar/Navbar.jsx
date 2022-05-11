@@ -9,7 +9,7 @@ import Link from "next/link";
     const { colorMode, toggleColorMode } = useColorMode();
     return (
         <>
-            <Container py="1rem" maxW="3000px">
+            <Container py="1rem" maxW="container.xl">
                 <HStack justifyContent={{ base: "space-between", md: "space-evenly" }}>
                 <Box display={{ base: "inline-block", md: "flex" }} style={{ gap: "2.8rem" }}>
                     <Heading as="h1" size="md">

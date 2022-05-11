@@ -1,11 +1,11 @@
 import Header from "./Header";
-import { Spacer } from "@chakra-ui/layout";
+import FeaturedWork from "./FeaturedWork";
 
 const LandingPage = () => {
     return(
         <>
             <Header/>
-            <Spacer/>
+            <FeaturedWork/>
         </>
     );
 }
