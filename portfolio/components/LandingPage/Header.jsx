@@ -61,7 +61,7 @@ const Header = () => {
                     </Heading>
                 </TextBlock>
             </Stack>
-            <Divider/>
+            <Divider p="0.5rem"/>
         </Container>
     );
 };
