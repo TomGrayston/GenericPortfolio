@@ -1,10 +1,9 @@
-import { Container, Heading, VStack, HStack, Skeleton, Badge, Divider} from "@chakra-ui/react";
-import { useColorModeValue } from "@chakra-ui/color-mode";
+import { Container, Heading, VStack, Button} from "@chakra-ui/react";
 import PlaceholderProject from "./PlaceholderProject";
 
 const FeaturedWork = () => {
     return(
-        <Container maxW="container.md">
+        <Container maxW="container.md" p="1rem">
             <VStack
             alignItems="left"
             justify="center"
@@ -16,6 +15,7 @@ const FeaturedWork = () => {
                 <PlaceholderProject/>
                 <PlaceholderProject/>
                 <PlaceholderProject/>
+                <Button size="sm"> See More </Button>
             </VStack>
         </Container>
 
