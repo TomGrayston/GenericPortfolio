@@ -13,8 +13,8 @@ import Link from "next/link";
                 <HStack justifyContent={{ base: "space-between", md: "space-evenly" }}>
                 <Box display={{ base: "inline-block", md: "flex" }} style={{ gap: "2.8rem" }}>
                     <Heading as="h1" size="md">
-                        <Link href="/"> 
-                            Dev Person 
+                        <Link href="/">
+                            Dev Person
                         </Link>
                     </Heading>
                     <Box display={{ base: "none", md: "inline" }} mr="auto">
