@@ -1,5 +1,5 @@
 import Header from "./Header";
-import FeaturedWork from "./FeaturedWork";
+import FeaturedWork from "./FeaturedWorkSection/FeaturedWork";
 
 const LandingPage = () => {
     return(
