@@ -43,7 +43,7 @@ const FeaturedWork = () => {
 
                 <Button size="sm" > See More </Button>
 
-                <Modal isOpen={isOpen} onClose={onClose} size="full" motionPreset='slideInBottom'>
+                <Modal isOpen={isOpen} onClose={onClose} size="2xl" motionPreset='slideInBottom'>
                     <ModalOverlay />
                     <ModalContent>
                     <ModalHeader>Modal Title</ModalHeader>
