@@ -5,7 +5,7 @@ import { Heading } from "@chakra-ui/react";
 import { Stack, Text, VStack, Container, Divider } from "@chakra-ui/layout";
 import Image from "next/image";
 import profilepic from "../../public/profilepicture.jpg";
-import TextBlock from "./TextBlock";
+import TextBlock from "./FeaturedWorkSection/TextBlock";
 
 const Header = () => {
     return (
