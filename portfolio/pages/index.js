@@ -1,9 +1,11 @@
-import LandingPage from "../components/LandingPage/LandingPage"
+import Header from "../components/LandingPage/Header"
+import FeaturedWork from "../components/LandingPage/FeaturedWorkSection/FeaturedWork"
 
 const HomePage = () => {
     return (
         <>
-            <LandingPage/>
+            <Header/>
+            <FeaturedWork/>
         </>
     )
     }

@@ -19,8 +19,8 @@ import Link from "next/link";
                     </Heading>
                     <Box display={{ base: "none", md: "inline" }} mr="auto">
                         <HStack spacing="1.7rem">
-                            <Link href="/Projects">Projects</Link>
-                            <Link href="/Contact">Contact Me</Link>
+                            <Link href="/projects">Projects</Link>
+                            <Link href="/contact">Contact Me</Link>
                         </HStack>
                     </Box>
                 </Box>
@@ -48,12 +48,12 @@ import Link from "next/link";
                             <Text>Home</Text>
                             </MenuItem>
                         </Link>
-                        <Link href="/Projects" passHref>
+                        <Link href="/projects" passHref>
                             <MenuItem id="menu-item-2">
                             <Text>Projects</Text>
                             </MenuItem>
                         </Link>
-                        <Link href="/Contact" passHref>
+                        <Link href="/contact" passHref>
                             <MenuItem id="menu-item-3">
                             <>
                                 <Text>Contact Me</Text>
