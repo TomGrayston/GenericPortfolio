@@ -14,7 +14,6 @@ const ExampleProject = ({ children }) => {
             borderRadius="lg"
             alignItems="flex-start"
             maxW="container.md"
-            onClick={console.log("Open")}
             >
                 <VStack alignItems="flex-start" >
                     {children}
