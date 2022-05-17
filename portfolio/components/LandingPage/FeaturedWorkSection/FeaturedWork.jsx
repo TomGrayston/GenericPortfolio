@@ -3,7 +3,7 @@ import {
     Button, Badge, HStack, Text,
     Modal, ModalOverlay, ModalContent,
     ModalHeader, ModalFooter, ModalBody,
-    ModalCloseButton, useDisclosure
+    ModalCloseButton, useDisclosure, Divider, Link
     } from '@chakra-ui/react';
 import ExampleProject from "./ExampleProject";
 import PlaceholderProject from "./PlaceholderProject";
@@ -11,16 +11,19 @@ import PlaceholderProject from "./PlaceholderProject";
 const FeaturedWork = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return(
-        <Container maxW="container.md" p="1rem">
+        <Container maxW="container.md" p="1rem 1 0 0">
             <VStack
             alignItems="left"
             justify="center"
             m={{ base: "1rem 0 1.2rem 0", md: "3rem 0 4rem 0" }}
             >
                 <Heading fontSize="xl">
-                    Featured Work
+                    Porfolio Projects
                 </Heading>
+
                 <PlaceholderProject/>
+                <PlaceholderProject/>
+                
                 <ExampleProject>
                     <Heading size="md" noOfLines="1">
                         Example React Project
@@ -41,7 +44,8 @@ const FeaturedWork = () => {
                     <Button size="xs" variant="ghost" alignSelf="flex-end" onClick={onOpen}> Learn More </Button>
                 </ExampleProject>
 
-                <Button size="sm" > See More </Button>
+                <Button size="sm" colorScheme="red" ><Link href="/projects"> View More Projects </Link></Button>
+                <Divider/>
 
                 <Modal isOpen={isOpen} onClose={onClose} size="2xl" motionPreset='slideInBottom'>
                     <ModalOverlay />
