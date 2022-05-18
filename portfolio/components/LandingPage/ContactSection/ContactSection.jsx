@@ -1,4 +1,5 @@
 import { Container, HStack, VStack, Heading, FormControl, Textarea, Input, Button} from "@chakra-ui/react";
+import { EmailIcon } from '@chakra-ui/icons';
 
 const ContactSection = ({ children }) => {
 
@@ -23,7 +24,7 @@ const ContactSection = ({ children }) => {
                     </VStack>
                 </FormControl>
                 <HStack alignSelf="flex-end">
-                    <Button colorScheme="red">Send Message</Button>
+                    <Button leftIcon={<EmailIcon/>} colorScheme="red">Send Message</Button>
                 </HStack>
             </VStack>
         </Container>

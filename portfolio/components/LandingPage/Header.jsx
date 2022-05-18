@@ -3,6 +3,7 @@ import { Button } from "@chakra-ui/button";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { Heading } from "@chakra-ui/react";
 import { Stack, Text, VStack, Container, Divider } from "@chakra-ui/layout";
+import { DownloadIcon } from '@chakra-ui/icons';
 import Image from "next/image";
 import profilepic from "../../public/profilepicture.jpg";
 import TextBlock from "./FeaturedWorkSection/TextBlock";
@@ -34,13 +35,13 @@ const Header = () => {
                     >
                         <Image
                         src={profilepic}
-                        alt="profile img"
+                        alt="Profile Picture Image"
                         layout="fill"
                         placeholder="blur"
                         />
                     </Avatar>
                     <br/>
-                    <Button colorScheme="red" size="sm"> Download My CV </Button>
+                    <Button colorScheme="red" size="sm" leftIcon={<DownloadIcon/>}> Download My CV </Button>
                 </VStack>
 
                 <TextBlock>

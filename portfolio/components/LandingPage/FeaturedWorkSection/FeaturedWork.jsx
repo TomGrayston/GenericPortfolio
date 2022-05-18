@@ -44,7 +44,7 @@ const FeaturedWork = () => {
                     <Button size="xs" variant="ghost" alignSelf="flex-end" onClick={onOpen}> Learn More </Button>
                 </ExampleProject>
 
-                <Button size="sm" colorScheme="red" ><Link href="/projects"> View More Projects </Link></Button>
+                <Link href="/projects" passHref align="center"><Button size="sm" colorScheme="red" width="100%"> View More Projects </Button></Link>
                 <Divider/>
 
                 <Modal isOpen={isOpen} onClose={onClose} size="2xl" motionPreset='slideInBottom'>
