@@ -3,7 +3,7 @@ import {
     Button, Badge, HStack, Text,
     Modal, ModalOverlay, ModalContent,
     ModalHeader, ModalFooter, ModalBody,
-    ModalCloseButton, useDisclosure, Divider, Link
+    ModalCloseButton, useDisclosure, Divider, Link, LinkOverlay
     } from '@chakra-ui/react';
 import ExampleProject from "./ExampleProject";
 import PlaceholderProject from "./PlaceholderProject";
@@ -26,7 +26,9 @@ const FeaturedWork = () => {
                 
                 <ExampleProject>
                     <Heading size="md" noOfLines="1">
-                        Example React Project
+                        <LinkOverlay onClick={onOpen} cursor="pointer" >
+                            Example React Project
+                        </LinkOverlay>
                     </Heading>
                     <HStack>
                         <Badge colorScheme="red" variant="solid" >
@@ -39,7 +41,7 @@ const FeaturedWork = () => {
                     <Text fontSize="sm">
                     Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
                     consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet
-                    minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.<br/>
+                    minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.....<br/>
                     </Text>
                     <Button size="xs" variant="ghost" alignSelf="flex-end" onClick={onOpen}> Learn More </Button>
                 </ExampleProject>
