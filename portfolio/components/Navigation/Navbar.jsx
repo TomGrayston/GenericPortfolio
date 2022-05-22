@@ -4,6 +4,8 @@ import { ChatIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { Box, Container, Divider, Heading, HStack, Spacer, Text } from "@chakra-ui/layout";
 import { Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/menu";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
+import { AiOutlineHome } from "react-icons/ai";
 
     const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -45,12 +47,18 @@ import Link from "next/link";
                         <MenuList id="menu-list">
                         <Link href="/" passHref>
                             <MenuItem id="menu-item-1">
-                            <Text>Home</Text>
+                                <>
+                                    <Text>Home</Text>
+                                    <AiOutlineHome />
+                                </>
                             </MenuItem>
                         </Link>
                         <Link href="/projects" passHref>
                             <MenuItem id="menu-item-2">
-                            <Text>Projects</Text>
+                                <>
+                                    <Text>Projects</Text>
+                                    <FaGithub />
+                                </>
                             </MenuItem>
                         </Link>
                         <Link href="/contact" passHref>
