@@ -36,8 +36,8 @@ const ProjectsPage = () => {
 
     return (
         <Container maxW="container.md" p="1rem 1 0 0">
-            <Flex align="center" justify="space-between" py="5">
-                <Heading as='h2' size='md'>Portfolio Projects</Heading>
+            <Flex align="center" justify="space-between" py="5"  direction={{ base: "column", sm: "row" }} >
+                <Heading as='h2' size='md' pb={[3,0]}>Portfolio Projects</Heading>
                 <NextLink href={"/"}>
                     <Button colorScheme="red" size="sm" pl="0">
                         <ArrowBackIcon w="8" h="6" />
