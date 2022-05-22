@@ -1,5 +1,5 @@
-import { Container, VStack, Divider, LinkBox, LinkOverlay, Modal, ModalOverlay, ModalContent, Text,
-    ModalHeader, ModalBody, ModalCloseButton, useDisclosure, HStack, Badge, ModalFooter} from "@chakra-ui/react";
+import { Container, VStack, LinkBox, LinkOverlay, Modal, ModalOverlay, ModalContent,
+    ModalHeader, ModalBody, ModalCloseButton, useDisclosure, Box, ModalFooter} from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 
 const ExampleProject = ({ children }) => {
@@ -23,29 +23,17 @@ const ExampleProject = ({ children }) => {
                     </LinkOverlay>
                 </Container>
             </LinkBox>
-            <Divider/>
 
             <Modal isOpen={isOpen} onClose={onClose} size="2xl" motionPreset='slideInBottom'>
                 <ModalOverlay />
                 <ModalContent>
                     <ModalHeader>
-                        Modal Title
+                        {children[0]}
                     </ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                        <HStack p="0 0 1rem 0">
-                            <Badge colorScheme="red" variant="solid" >
-                                React
-                            </Badge>
-                            <Badge colorScheme="red" variant="solid" >
-                                Next JS
-                            </Badge>
-                        </HStack>
-                        <Text fontSize="sm">
-                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                        consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet
-                        minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.<br/>
-                        </Text>
+                        <Box pb="4">{children[1]}</Box>
+                        {children[2]}
                     </ModalBody>
                     <ModalFooter>
                     </ModalFooter>
