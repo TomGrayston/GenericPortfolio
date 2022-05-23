@@ -58,7 +58,7 @@ const ExampleProject: React.FC<Props> = ({ project }) => {
                     <ModalHeader>{project.heading}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                        <Box pb="4">{project.subheading}</Box>
+                        <Box pb="4">{project.year}</Box>
                         {project.body}
                     </ModalBody>
                     <ModalFooter></ModalFooter>
