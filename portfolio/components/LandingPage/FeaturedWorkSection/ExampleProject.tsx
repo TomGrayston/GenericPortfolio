@@ -1,5 +1,22 @@
 import {
-    Container, VStack, LinkBox, LinkOverlay, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, useDisclosure, Box, ModalFooter, Heading, Badge, HStack, Text,
+    Container,
+    VStack,
+    LinkBox,
+    LinkOverlay,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalBody,
+    ModalCloseButton,
+    useDisclosure,
+    Box,
+    ModalFooter,
+    Heading,
+    Badge,
+    HStack,
+    Text,
+    Stack,
 } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { Project } from "../../../common/types";
@@ -10,6 +27,16 @@ interface Props {
 
 const ExampleProject: React.FC<Props> = ({ project }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
+
+    const techBadges = project.techUsed ? (
+        <Box>
+            {project?.techUsed.map((tech, i) => (
+                <Badge colorScheme="red" variant="solid" px="2" mr="2" key={i}>
+                    {tech}
+                </Badge>
+            ))}
+        </Box>
+    ) : null;
 
     return (
         <>
@@ -25,10 +52,15 @@ const ExampleProject: React.FC<Props> = ({ project }) => {
                 >
                     <LinkOverlay onClick={onOpen}>
                         <VStack alignItems="flex-start">
-                            <Heading size="md" noOfLines={1}>
-                                {project.heading}
-                            </Heading>
-                            <HStack align="center">
+                            <Stack 
+                                direction={{ base: "column-reverse", sm: "row"}}
+                                align={{base: "start", sm: "center"}}
+                                w="full"
+                                justify="space-between"
+                            >
+                                <Heading size="md" noOfLines={1}>
+                                    {project.heading}
+                                </Heading>
                                 <Badge
                                     colorScheme="red"
                                     variant="solid"
@@ -37,10 +69,11 @@ const ExampleProject: React.FC<Props> = ({ project }) => {
                                 >
                                     {project.year}
                                 </Badge>
-                                <Text fontSize="xs" align="center">
-                                    {project.subheading}
-                                </Text>
-                            </HStack>
+                            </Stack>
+                            <Text fontSize="xs" align="center">
+                                {project.subheading}
+                            </Text>
+                            {techBadges}
                             <Text fontSize="sm">{project.body}</Text>
                         </VStack>
                     </LinkOverlay>
@@ -55,11 +88,25 @@ const ExampleProject: React.FC<Props> = ({ project }) => {
             >
                 <ModalOverlay />
                 <ModalContent>
-                    <ModalHeader>{project.heading}</ModalHeader>
+                    <ModalHeader pb="1">{project.heading}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                        <Box pb="4">{project.year}</Box>
-                        {project.body}
+                        <VStack align="start">
+                            <HStack align="center" >
+                                <Badge
+                                    colorScheme="red"
+                                    variant="solid"
+                                    borderRadius="full"
+                                    px="2"
+                                >
+                                    {project.year}
+                                </Badge>
+                                <Text fontSize="xs" align="center">
+                                    {project.subheading}
+                                </Text>
+                            </HStack>
+                            <Text>{project.body}</Text>
+                        </VStack>
                     </ModalBody>
                     <ModalFooter></ModalFooter>
                 </ModalContent>
