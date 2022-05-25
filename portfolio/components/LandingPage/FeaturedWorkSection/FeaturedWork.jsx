@@ -1,5 +1,5 @@
 import {
-    Container, Heading, VStack, Button, Badge, HStack, Text, Divider, Link, LinkOverlay
+    Container, Heading, VStack, Button, Divider, Link
     } from '@chakra-ui/react';
 import ExampleProject from "./ExampleProject";
 import PlaceholderProject from "./PlaceholderProject";
@@ -7,7 +7,7 @@ import PROJECTS from "../../../common/projectsData.json"
 
 const FeaturedWork = () => {
 
-    const featuredProjects = PROJECTS.filter(project => project?.isFeatured === true).map(project => (<ExampleProject project={project} />))
+    const featuredProjects = PROJECTS.filter(project => project?.isFeatured === true).map(project => (<ExampleProject key={project.id} project={project} />))
 
     return(
         <Container maxW="container.md" p="1rem 1 0 0">
