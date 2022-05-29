@@ -7,8 +7,8 @@ export default function (req: NextApiRequest, res: NextApiResponse) {
         port: 465,
         host: "smtp.gmail.com",
         auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASSWD,
+            user: process.env.DUMMY_EMAIL_USER,
+            pass: process.env.DUMMY_EMAIL_PASSWD,
         },
         secure: true
     })
@@ -25,9 +25,11 @@ export default function (req: NextApiRequest, res: NextApiResponse) {
     }
 
     transporter.sendMail(data, (err,info) => {
-        if (err) console.log(err);
+        if (err) {
+            console.error(err);
+            res.status(500)
+        }
         else console.log(info)
     })
-    console.log(req.body);
     res.status(200);
 }

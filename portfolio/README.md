@@ -1,7 +1,7 @@
 ## Nodemailer
 For receiving mail via the contact form, we're using Nodemailer, which sends emails first to a dummy account (not your personal acc) to keep personal email accounts secure.
 
-NB: In the dummy account, you must enable access from less-secure apps in the settings. From 30th May, this feature is being disabled 'if it is not being used'. I'm not sure what exactly that will mean for the contact form setup as it is.
+NB: Google is phasing out less secure app access. To use the dummy account, you must generate an app password (see [here](https://support.google.com/mail/answer/185833?hl=en-GB)) and add it to your .env file
 
 ## ENV Variables
 
@@ -10,5 +10,5 @@ For local development, ENV variables should be stored in a .env file in the root
 | key | value |
 | --- | --- |
 | DUMMY_EMAIL_USER | email address of a burner acc the email is initially sent to |
-| DUMMY_EMAIL_PASSWD | password for the burner email acc |
+| DUMMY_EMAIL_PASSWD | an 'app password' for the burner email acc |
 | MY_EMAIL | email address of your personal account where emails should finally be sent to |
