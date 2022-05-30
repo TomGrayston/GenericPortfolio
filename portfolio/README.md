@@ -5,10 +5,11 @@ NB: Google is phasing out less secure app access. To use the dummy account, you 
 
 ## ENV Variables
 
-For local development, ENV variables should be stored in a .env file in the root of the project and should contain the following values. The file is ignored by git.
+For local development, ENV variables should be stored in a .env.local file in the root of the project and should contain the following values. The file is ignored by git.
 
 | key | value |
 | --- | --- |
 | DUMMY_EMAIL_USER | email address of a burner acc the email is initially sent to |
 | DUMMY_EMAIL_PASSWD | an 'app password' for the burner email acc |
+| SMTP_HOST | your chosen smtp host (e.g. smtp.gmail.com) |
 | MY_EMAIL | email address of your personal account where emails should finally be sent to |

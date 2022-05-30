@@ -14,7 +14,6 @@
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@types/nodemailer": "^6.4.4",
-    "dotenv": "^16.0.1",
     "framer-motion": "^6.3.3",
     "next": "12.1.6",
     "nodemailer": "^6.7.5",

@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { createTransport } from "nodemailer";
-import 'dotenv/config';
 
 export default function (req: NextApiRequest, res: NextApiResponse) {
     const transporter = createTransport({
