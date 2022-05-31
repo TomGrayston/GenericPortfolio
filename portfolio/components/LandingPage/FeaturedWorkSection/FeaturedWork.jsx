@@ -22,15 +22,15 @@ const FeaturedWork = () => {
 
                 <PlaceholderProject/>
                 <PlaceholderProject/>
-
-
+                {featuredProjects}
+                
+                <Divider/>
                 <Link href="/projects" passHref align="center" >
                     <Button size="sm" colorScheme="red" width="100%" textDecoration="none">
                         View More Projects
                     </Button>
                 </Link>
-                <Divider/>
-                {featuredProjects}
+                <Divider/>                    
             </VStack>
         </Container>
     );

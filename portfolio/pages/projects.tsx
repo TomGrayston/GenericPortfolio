@@ -17,7 +17,7 @@ const ProjectsPage: React.FC = () => {
     const projects = PROJECTS.map((project: Project) => {
         return (
         <>
-           <ExampleProject key={project.id} project={project} />
+            <ExampleProject key={project.id} project={project} />
             <Divider my="3" colorScheme="red" /> 
         </>
     )});

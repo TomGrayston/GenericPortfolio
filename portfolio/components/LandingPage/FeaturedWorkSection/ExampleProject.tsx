@@ -74,7 +74,7 @@ const ExampleProject: React.FC<Props> = ({ project }) => {
                                 {project.subheading}
                             </Text>
                             {techBadges}
-                            <Text fontSize="sm">{project.body}</Text>
+                            <Text fontSize="sm" noOfLines={5}>{project.body}</Text>
                         </VStack>
                     </LinkOverlay>
                 </Container>
