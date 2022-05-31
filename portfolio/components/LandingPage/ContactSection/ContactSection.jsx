@@ -1,7 +1,10 @@
 import { Container, HStack, VStack, Heading, FormControl, Textarea, Input, Button} from "@chakra-ui/react";
 import { EmailIcon } from '@chakra-ui/icons';
+import { useToast } from '@chakra-ui/react'
 
 const ContactSection = ({ children }) => {
+
+    const toast = useToast()
 
     return(
         <Container maxW="container.md" >
@@ -24,7 +27,19 @@ const ContactSection = ({ children }) => {
                     </VStack>
                 </FormControl>
                 <HStack alignSelf="flex-end">
-                    <Button leftIcon={<EmailIcon/>} colorScheme="red">Send Message</Button>
+                    <Button
+                        leftIcon={<EmailIcon/>}
+                        colorScheme="red"
+                        onClick={() =>
+                            toast({
+                                title: 'Message Sent',
+                                description: "I will try to get back to you as fast as possible",
+                                status: 'success',
+                                duration: 1500
+                                })}
+                        >
+                        Send Message
+                    </Button>
                 </HStack>
             </VStack>
         </Container>
