@@ -1,10 +1,14 @@
 import {
-    Container, Heading, VStack, Button, Badge, HStack, Text, Divider, Link, LinkOverlay
+    Container, Heading, VStack, Button, Divider, Link
     } from '@chakra-ui/react';
 import ExampleProject from "./ExampleProject";
 import PlaceholderProject from "./PlaceholderProject";
+import PROJECTS from "../../../common/projectsData.json"
 
 const FeaturedWork = () => {
+
+    const featuredProjects = PROJECTS.filter(project => project?.isFeatured === true).map(project => (<ExampleProject key={project.id} project={project} />))
+
     return(
         <Container maxW="container.md" p="1rem 1 0 0">
             <VStack
@@ -18,33 +22,15 @@ const FeaturedWork = () => {
 
                 <PlaceholderProject/>
                 <PlaceholderProject/>
-
-                <ExampleProject>
-                    <Heading size="md" noOfLines="1">
-                        Example React Project
-                    </Heading>
-                    <HStack>
-                        <Badge colorScheme="red" variant="solid" >
-                            React
-                        </Badge>
-                        <Badge colorScheme="red" variant="solid" >
-                            Next JS
-                        </Badge>
-                    </HStack>
-                    <Text fontSize="sm">
-                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                        consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet
-                        minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.<br/>
-                    </Text>
-                </ExampleProject>
-
+                {featuredProjects}
+                
+                <Divider/>
                 <Link href="/projects" passHref align="center" >
                     <Button size="sm" colorScheme="red" width="100%" textDecoration="none">
                         View More Projects
                     </Button>
                 </Link>
-                <Divider/>
-
+                <Divider/>                    
             </VStack>
         </Container>
     );
