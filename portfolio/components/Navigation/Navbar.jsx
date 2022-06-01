@@ -68,9 +68,7 @@ import { AiOutlineHome } from "react-icons/ai";
                             <MenuItem id="menu-item-3">
                             <>
                                 <Text>
-                                    
                                         Contact Me
-                                    
                                 </Text>
                                 <ChatIcon ml="auto" />
                             </>
