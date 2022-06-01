@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 import { useState } from "react";
+import { useToast } from '@chakra-ui/react'
 
 const ContactSection = ({ children }) => {
     const [name, setName] = useState("");
@@ -17,6 +18,8 @@ const ContactSection = ({ children }) => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [submitted, setSubmitted] = useState(false);
+
+    const toast = useToast()
 
     const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
@@ -38,12 +41,25 @@ const ContactSection = ({ children }) => {
         })
 
         if (res.status === 200) {
-                console.log("Response succeeded!");
-                setSubmitted(true);
-                setName("");
-                setEmail("");
-                setMessage("");
-            }
+            toast({
+                title: 'Message Sent',
+                description: "I will try to get back to you as fast as possible",
+                status: 'success',
+                duration: 1500
+            })
+            setSubmitted(true);
+            setName("");
+            setEmail("");
+            setSubject("");
+            setMessage("");
+        } else {
+            toast({
+                title: 'Something went wrong.',
+                description: "Sorry, there was a problem sending your email",
+                status: 'error',
+                duration: 1500
+                })
+        }
     };
 
     return (
