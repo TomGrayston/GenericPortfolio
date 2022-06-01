@@ -23,7 +23,9 @@ import { AiOutlineHome } from "react-icons/ai";
                     <Box display={{ base: "none", md: "inline" }} mr="auto">
                         <HStack spacing="1.7rem">
                             <Link href="/projects">Projects</Link>
-                            <Link href="/contact">Contact Me</Link>
+                            <a class="skip-link" href="#contact">
+                                Contact Me
+                            </a>
                         </HStack>
                     </Box>
                 </Box>
@@ -62,14 +64,18 @@ import { AiOutlineHome } from "react-icons/ai";
                                 </>
                             </MenuItem>
                         </Link>
-                        <Link href="/contact" passHref>
+                        <a class="skip-link" href="#contact">
                             <MenuItem id="menu-item-3">
                             <>
-                                <Text>Contact Me</Text>
+                                <Text>
+                                    
+                                        Contact Me
+                                    
+                                </Text>
                                 <ChatIcon ml="auto" />
                             </>
                             </MenuItem>
-                        </Link>
+                        </a>
                         </MenuList>
                     </Menu>
                     </Box>
