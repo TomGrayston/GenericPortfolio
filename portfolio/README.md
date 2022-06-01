@@ -12,4 +12,5 @@ For local development, ENV variables should be stored in a .env.local file in th
 | DUMMY_EMAIL_USER | email address of a burner acc the email is initially sent to |
 | DUMMY_EMAIL_PASSWD | an 'app password' for the burner email acc |
 | SMTP_HOST | your chosen smtp host (e.g. smtp.gmail.com) |
+| SMTP_PORT | 465 unless you have a reason for changing it |
 | MY_EMAIL | email address of your personal account where emails should finally be sent to |

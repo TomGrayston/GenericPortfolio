@@ -36,6 +36,7 @@ const ContactSection = ({ children }) => {
             },
             body: JSON.stringify(data),
         })
+
         if (res.status === 200) {
                 console.log("Response succeeded!");
                 setSubmitted(true);
@@ -59,6 +60,7 @@ const ContactSection = ({ children }) => {
                                 placeholder="Name"
                                 size="lg"
                                 variant="filled"
+                                value={name}
                                 onChange={(e) => setName(e.target.value)}
                             />
                             <Input
@@ -66,6 +68,7 @@ const ContactSection = ({ children }) => {
                                 placeholder="Email Address"
                                 size="lg"
                                 variant="filled"
+                                value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </HStack>
@@ -74,6 +77,7 @@ const ContactSection = ({ children }) => {
                             placeholder="Subject"
                             size="lg"
                             variant="filled"
+                            value={subject}
                             onChange={(e) => setSubject(e.target.value)}
                         />
                         <Textarea
@@ -81,6 +85,7 @@ const ContactSection = ({ children }) => {
                             placeholder="Message..."
                             size="lg"
                             variant="filled"
+                            value={message}
                             onChange={(e) => setMessage(e.target.value)}
                         />
                     </VStack>
