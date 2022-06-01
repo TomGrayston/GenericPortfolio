@@ -41,7 +41,9 @@ const Header = () => {
                         />
                     </Avatar>
                     <br/>
-                    <Button colorScheme="red" size="sm" leftIcon={<DownloadIcon/>}> Download My CV </Button>
+                    <Button colorScheme="red" size="sm" leftIcon={<DownloadIcon/>} >
+                        <a src="../../public/TestDoc.pdf" download="TestDoc.pdf" href="TestDoc.pdf"> Download My CV </a> 
+                    </Button>
                 </VStack>
 
                 <TextBlock>
