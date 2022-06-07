@@ -63,60 +63,62 @@ const ContactSection = ({ children }) => {
     };
 
     return (
-        <Container maxW="container.md">
-            <VStack m={{ base: "1rem 0 1.2rem 0", md: "3rem 0 4rem 0" }}>
-                <Heading fontSize="xl" alignSelf="flex-start">
-                    Contact Me
-                </Heading>
-                <FormControl>
-                    <VStack alignItems="">
-                        <HStack>
+        <div id="contact">
+            <Container maxW="container.md">
+                <VStack m={{ base: "1rem 0 1.2rem 0", md: "3rem 0 4rem 0" }}>
+                    <Heading fontSize="xl" alignSelf="flex-start">
+                        Contact Me
+                    </Heading>
+                    <FormControl>
+                        <VStack alignItems="">
+                            <HStack>
+                                <Input
+                                    id="name"
+                                    placeholder="Name"
+                                    size="lg"
+                                    variant="filled"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                />
+                                <Input
+                                    id="email"
+                                    placeholder="Email Address"
+                                    size="lg"
+                                    variant="filled"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
+                            </HStack>
                             <Input
-                                id="name"
-                                placeholder="Name"
+                                id="subject"
+                                placeholder="Subject"
                                 size="lg"
                                 variant="filled"
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
+                                value={subject}
+                                onChange={(e) => setSubject(e.target.value)}
                             />
-                            <Input
-                                id="email"
-                                placeholder="Email Address"
+                            <Textarea
+                                id="message"
+                                placeholder="Message..."
                                 size="lg"
                                 variant="filled"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
                             />
-                        </HStack>
-                        <Input
-                            id="subject"
-                            placeholder="Subject"
-                            size="lg"
-                            variant="filled"
-                            value={subject}
-                            onChange={(e) => setSubject(e.target.value)}
-                        />
-                        <Textarea
-                            id="message"
-                            placeholder="Message..."
-                            size="lg"
-                            variant="filled"
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}
-                        />
-                    </VStack>
-                </FormControl>
-                <HStack alignSelf="flex-end">
-                    <Button
-                        leftIcon={<EmailIcon />}
-                        colorScheme="red"
-                        onClick={(e:React.MouseEvent<HTMLButtonElement>) => handleSubmit(e)}
-                    >
-                        Send Message
-                    </Button>
-                </HStack>
-            </VStack>
-        </Container>
+                        </VStack>
+                    </FormControl>
+                    <HStack alignSelf="flex-end">
+                        <Button
+                            leftIcon={<EmailIcon />}
+                            colorScheme="red"
+                            onClick={(e:React.MouseEvent<HTMLButtonElement>) => handleSubmit(e)}
+                        >
+                            Send Message
+                        </Button>
+                    </HStack>
+                </VStack>
+            </Container>
+        </div>
     );
 };
 
