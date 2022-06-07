@@ -48,7 +48,7 @@ import { AiOutlineHome } from "react-icons/ai";
                             id="menu-burger-btn"
                         />
                         <MenuList id="menu-list">
-                        <Link href="/" passHref>
+                        <Link href="/" >
                             <MenuItem id="menu-item-1">
                                 <>
                                     <Text>Home</Text>
@@ -56,7 +56,7 @@ import { AiOutlineHome } from "react-icons/ai";
                                 </>
                             </MenuItem>
                         </Link>
-                        <Link href="/projects" passHref>
+                        <Link href="/projects" >
                             <MenuItem id="menu-item-2">
                                 <>
                                     <Text>Projects</Text>
@@ -66,12 +66,12 @@ import { AiOutlineHome } from "react-icons/ai";
                         </Link>
                         <a class="skip-link" href="#contact">
                             <MenuItem id="menu-item-3">
-                            <>
-                                <Text>
-                                        Contact Me
-                                </Text>
-                                <ChatIcon ml="auto" />
-                            </>
+                                <>
+                                    <Text>
+                                            Contact Me
+                                    </Text>
+                                    <ChatIcon ml="auto" />
+                                </>
                             </MenuItem>
                         </a>
                         </MenuList>

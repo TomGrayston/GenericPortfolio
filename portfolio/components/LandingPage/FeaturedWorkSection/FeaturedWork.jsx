@@ -25,7 +25,7 @@ const FeaturedWork = () => {
                 {featuredProjects}
                 
                 <Divider/>
-                <Link href="/projects" passHref align="center" >
+                <Link href="/projects" align="center" >
                     <Button size="sm" colorScheme="red" width="100%" textDecoration="none">
                         View More Projects
                     </Button>
