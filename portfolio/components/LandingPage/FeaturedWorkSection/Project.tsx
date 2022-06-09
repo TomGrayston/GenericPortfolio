@@ -92,7 +92,7 @@ const ExampleProject: React.FC<Props> = ({ project }) => {
                     </LinkOverlay>
                 </Container>
             </LinkBox>
-            <Divider/>
+            <Divider my="3" />
 
             <Modal
                 isOpen={isOpen}
