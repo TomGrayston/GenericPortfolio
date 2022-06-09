@@ -1,4 +1,4 @@
-import ExampleProject from "../components/LandingPage/FeaturedWorkSection/ExampleProject";
+import Project from "../components/LandingPage/FeaturedWorkSection/Project";
 import {
     Container,
     Heading,
@@ -10,16 +10,13 @@ import { ArrowBackIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
 
 import PROJECTS from "../common/projectsData.json";
-import { Project } from "../common/types";
+import { Project as ProjectInterface } from "../common/types";
 
 const ProjectsPage: React.FC = () => {
     
-    const projects = PROJECTS.map((project: Project) => {
+    const projects = PROJECTS.map((project: ProjectInterface) => {
         return (
-        <>
-            <ExampleProject key={project.id} project={project} />
-            <Divider my="3" colorScheme="red" /> 
-        </>
+        <Project key={project.id} project={project} /> 
     )});
 
     return (

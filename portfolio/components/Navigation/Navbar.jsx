@@ -23,7 +23,7 @@ import { AiOutlineHome } from "react-icons/ai";
                     <Box display={{ base: "none", md: "inline" }} mr="auto">
                         <HStack spacing="1.7rem">
                             <Link href="/projects">Projects</Link>
-                            <a class="skip-link" href="#contact">
+                            <a className="skip-link" href="#contact">
                                 Contact Me
                             </a>
                         </HStack>
@@ -64,7 +64,7 @@ import { AiOutlineHome } from "react-icons/ai";
                                 </>
                             </MenuItem>
                         </Link>
-                        <a class="skip-link" href="#contact">
+                        <a className="skip-link" href="#contact">
                             <MenuItem id="menu-item-3">
                                 <>
                                     <Text>
