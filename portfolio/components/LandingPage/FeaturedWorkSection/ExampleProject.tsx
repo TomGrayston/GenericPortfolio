@@ -17,9 +17,14 @@ import {
     HStack,
     Text,
     Stack,
+    Divider,
+    Button,
+    Link
 } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
+import { FaGithub } from "react-icons/fa";
 import { Project } from "../../../common/types";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 interface Props {
     project: Project;
@@ -36,6 +41,14 @@ const ExampleProject: React.FC<Props> = ({ project }) => {
                 </Badge>
             ))}
         </Box>
+    ) : null;
+
+    const LearnMoreLink = project.link ? (
+        <Link href={project.link} alignSelf="end">
+            <Button leftIcon={<FaGithub/>} rightIcon={<ExternalLinkIcon/>} >
+                Learn More
+            </Button>
+        </Link>
     ) : null;
 
     return (
@@ -87,11 +100,11 @@ const ExampleProject: React.FC<Props> = ({ project }) => {
                 motionPreset="slideInBottom"
             >
                 <ModalOverlay />
-                <ModalContent>
+                <ModalContent >
                     <ModalHeader pb="1">{project.heading}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                        <VStack align="start">
+                        <VStack align="start" >
                             <HStack align="center" >
                                 <Badge
                                     colorScheme="red"
@@ -108,7 +121,12 @@ const ExampleProject: React.FC<Props> = ({ project }) => {
                             <Text>{project.body}</Text>
                         </VStack>
                     </ModalBody>
-                    <ModalFooter></ModalFooter>
+                    <ModalFooter>
+                        <VStack width="100%" >
+                            <Divider/>
+                            {LearnMoreLink}
+                        </VStack>
+                    </ModalFooter>
                 </ModalContent>
             </Modal>
         </>
